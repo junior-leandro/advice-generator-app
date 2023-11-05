@@ -35,13 +35,13 @@ const AdviceSlip = () => {
             src={Divider}
             alt="Citação" 
             className="p-8"/>
-            <div 
+            <button 
             className=" bg-neonGreen p-4 rounded-full -mb-7 hover:shadow-3xl">
             <Image
             src={Dice}
             alt="Dado para nova busca"
             />
-            </div>
+            </button>
         </div>
     )
 }
