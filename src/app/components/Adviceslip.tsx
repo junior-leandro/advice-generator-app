@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import Divider from '../../assets/pattern-divider-desktop.svg';
+import DividerMobile from '../../assets/pattern-divider-mobile.svg';
+import DividerDesktop from '../../assets/pattern-divider-desktop.svg';
 import Dice from '../../assets/icon-dice.svg';
 
 const AdviceSlip = () => {
@@ -14,7 +15,7 @@ const AdviceSlip = () => {
     });
 
     useEffect(() => {
-        fetch('https://api.adviceslip.com/advice/71') // id 71 provisório para criação do layout 
+        fetch('https://api.adviceslip.com/advice') // id 71 provisório para criação do layout 
             .then((response) => response.json())
             .then((data) =>
                 setData({
@@ -32,15 +33,19 @@ const AdviceSlip = () => {
             </div>
             <span className="text-lightCyan font-bold text-2xl px-8 text-center">"{data.advice}"</span>
             <Image
-            src={Divider}
-            alt="Citação" 
-            className="p-8"/>
-            <button 
-            className=" bg-neonGreen p-4 rounded-full -mb-7 hover:shadow-3xl">
+                src={DividerMobile}
+                alt="Citação"
+                className="p-8 min-[375px]:hidden" />
             <Image
-            src={Dice}
-            alt="Dado para nova busca"
-            />
+                src={DividerDesktop}
+                alt="Citação"
+                className="p-8 max-[374px]:hidden" />
+            <button
+                className=" bg-neonGreen p-4 rounded-full -mb-7 hover:shadow-3xl">
+                <Image
+                    src={Dice}
+                    alt="Dado para nova busca"
+                />
             </button>
         </div>
     )
