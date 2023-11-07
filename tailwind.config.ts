@@ -35,7 +35,7 @@ const config: Config = {
         'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       boxShadow: {
-        '3xl': '0 5px 30px -8px rgba(82, 255, 168, 1)',
+        '3xl': '0 5px 60px -8px rgba(82, 255, 168, 1)',
       }
     },
   },
