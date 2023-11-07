@@ -40,7 +40,10 @@ const AdviceSlip = () => {
                 {/*<span>{data.id}</span> // fixado para layout */}
                 <span>117</span>
             </div>
-            <span className="text-lightCyan font-bold text-2xl px-8 text-center max-w-[450px]">"{data.advice}"</span>
+            <span className="text-lightCyan font-bold text-2xl px-8 text-center max-w-[450px]">
+                {/* "{data.advice}" // fixado para layout */}
+                "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+                </span>
             <Image
                 src={DividerMobile}
                 alt="Citação"
