@@ -17,7 +17,7 @@ const AdviceSlip = () => {
     const [buttonClick, setButtonClick] = useState(0);
 
     useEffect(() => {
-        fetch('https://api.adviceslip.com/advice/71') // codigo 71 provisório para layout
+        fetch('https://api.adviceslip.com/advice/71') // codigo 71 fixo provisório para layout
             .then((response) => response.json())
             .then((data) =>
                 setData({
@@ -37,7 +37,7 @@ const AdviceSlip = () => {
         <div className="flex flex-col max-w-xl mx-3 justify-center items-center bg-darkGrayishBlue rounded-xl">
             <div className="text-xs text-neonGreen tracking-widest py-8">
                 <span>ADIVICE #</span>
-                {/*<span>{data.id}</span>*/}
+                {/*<span>{data.id}</span> // fixado para layout */}
                 <span>117</span>
             </div>
             <span className="text-lightCyan font-bold text-2xl px-8 text-center max-w-[450px]">"{data.advice}"</span>
